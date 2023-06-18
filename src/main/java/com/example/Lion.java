@@ -17,13 +17,10 @@ public class Lion {
         }
     }
 
-    //Feline feline = new Feline();
-
-//Шаблон инъекции
     public Lion(Feline feline) {
         this.feline = feline;
     }
-//конец шаблона
+
     public int getKittens() {
         return feline.getKittens();
     }
