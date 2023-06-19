@@ -7,7 +7,6 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -33,7 +32,7 @@ public class CatTest {
         Cat cat = new Cat(feline);
         Mockito.when(feline.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
 
-        ArrayList<String> expectedResult = new ArrayList<>(Arrays.asList("Животные", "Птицы", "Рыба"));
+        ArrayList<String> expectedResult = new ArrayList<>(List.of("Животные", "Птицы", "Рыба"));
         List<String> actualResult = cat.getFood();
 
         assertEquals(expectedResult, actualResult);
