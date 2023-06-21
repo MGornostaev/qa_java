@@ -41,14 +41,13 @@ public class LionTest {
 
     @Test
     public void doesHaveManeWithUnknownSexShouldThrowException() {
+        int exceptionCounter = 0;
         try {
             Lion lion = new Lion(feline, "Дирижабль");
             lion.doesHaveMane();
         } catch (Exception exception) {
-            String message = "Используйте допустимые значения пола животного - самец или самка";
-       //Проверяем получение эксепшена по сообщению
-            boolean actualResult = exception.getMessage().equals(message);
-            assertTrue(actualResult);
+            exceptionCounter++;
         }
+        assertEquals(1,exceptionCounter);
     }
 }
